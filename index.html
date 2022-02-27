@@ -12,7 +12,33 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+
+    <div class="d-flex w-50 mx-auto my-5">
+        <input class="form-control" type="search" placeholder="Search Your Player" aria-label="Search" id="search-input">
+        <button class="btn btn-outline-success" type="submit" id="search-btn" onclick="allPlayers()">Search</button>
+    </div>
+
+    <div class="main-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" id="player-area">
+                    <!-- <div class="card" style="width: 18rem;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary" id="details-btn">Details</a>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="col-md-6" id="details-area">
+                    <h3>right-side</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <!-- Optional JavaScript; choose one of the two! -->
 
