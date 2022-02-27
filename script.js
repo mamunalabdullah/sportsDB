@@ -2,8 +2,11 @@ const searchInput = document.getElementById("search-input");
 const searchBtn = document.getElementById("search-btn");
 
 const allPlayers = () => {
-    const inputValue = searchInput.value;
+    document.getElementById("player-area").innerHTML = "";
+    document.getElementById("details-area").innerHTML = "";
 
+    const inputValue = searchInput.value;
+    searchInput.value = "";
     const url = `https://www.thesportsdb.com/api/v1/json/2/searchplayers.php?p=${inputValue}`;
 
     fetch(url)
@@ -34,6 +37,7 @@ const displayPlayer = (players) => {
 // <p class="card-text">${player.strDescriptionEN}</p>
 
 const details = (details) => {
+    document.getElementById("details-area").innerHTML = "";
     const url = `https://www.thesportsdb.com/api/v1/json/2/lookupplayer.php?id=${details}`;
 
     fetch(url)
