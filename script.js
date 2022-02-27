@@ -17,10 +17,10 @@ const displayPlayer = (players) => {
         const div= document.createElement("div");
         div.innerHTML = `
         <div class="card mb-2" style="width: 18rem;">
-            <img src="${player.strThumb}" class="card-img-top w-100 h-auto" alt="...">
+            <img src="${player.strCutout}" class="card-img-top w-100 h-auto" alt="...">
             <div class="card-body">
                 <h3 class="card-title">${player.strPlayer}</h3>
-                <h5 class="card-title">${player.strNationality}</h5>
+                <h5 class="card-title">${player.strSport}, ${player.strTeam}</h5>
                 
                 <a href="#" class="btn btn-danger" id="delete-btn">Delete</a>
                 <a href="#" class="btn btn-primary" id="details-btn" onclick="details('${player.idPlayer}')">Details</a>
@@ -46,6 +46,14 @@ const displayDetails = (info) => {
 
     const div = document.createElement("div");
     div.innerHTML = `
-    
+    <div class="card w-100">
+        <img src="${info.strThumb}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h3 class="card-title">${info.strPlayer}</h3>
+            <h5 class="card-title">${info.strNationality}, ${info.strNumber}</h5>
+            <p class="card-text">${info.strDescriptionEN}</p>
+        </div>
+    </div>
     `;
+    information.appendChild(div);
 }
